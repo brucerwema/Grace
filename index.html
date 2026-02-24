@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Grace Community Church</title>
+  <meta name="description" content="Grace Community Church — Worship, Sermons, and Prayer."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ═══════════════ NAV ═══════════════ -->
+<nav id="nav">
+  <a class="nav-logo" href="#" data-route="home">
+    <div class="icon">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round">
+        <path d="M12 2v20M2 12h20"/>
+      </svg>
+    </div>
+    <span class="name">Grace Community</span>
+  </a>
+
+  <div class="nav-links">
+    <a href="#" data-route="home">Home</a>
+    <a href="#" data-route="sermons">Sermons</a>
+    <a href="#" data-route="prayer">Prayer</a>
+    <a href="#" data-route="admin">Admin</a>
+    <a href="#" data-route="live" class="nav-live"><span class="dot"></span>Live</a>
+  </div>
+
+  <button id="burger" aria-label="Open navigation">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- mobile drawer -->
+<div id="drawer" role="dialog" aria-label="Navigation">
+  <a href="#" data-route="home">Home</a>
+  <a href="#" data-route="sermons">Sermons</a>
+  <a href="#" data-route="live">Live Service</a>
+  <a href="#" data-route="prayer">Prayer Wall</a>
+  <a href="#" data-route="admin">Admin</a>
+</div>
+<div id="overlay"></div>
+
+<!-- ═══════════════ MAIN ═══════════════ -->
+<main id="app">
+
+  <!-- ───────────── HOME ───────────── -->
+  <div id="pg-home" class="page">
+
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-grain"></div>
+      <div class="hero-content">
+        <div class="hero-tag"><span class="dot"></span>Welcome Home</div>
+        <h1>A Place of <em>Grace</em>,<br>Faith &amp; Community</h1>
+        <p>
+          Join thousands gathering every week to worship, grow in truth,
+          and encounter the living God. You are welcome here, exactly as you are.
+        </p>
+        <div class="hero-btns">
+          <a href="#" class="btn btn-gold" data-route="live">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+            Join Live Service
+          </a>
+          <a href="#" class="btn btn-ghost" data-route="sermons">Listen to Sermons</a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider"/>
+
+    <section class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Weekly Gatherings</span>
+        <h2>Join Us in Person or Online</h2>
+        <p>Every service is a new opportunity to encounter God and grow together.</p>
+      </div>
+      <div class="schedule">
+        <div class="sched-row">
+          <div class="sched-day">Sunday</div>
+          <div class="sched-detail">
+            <h4>Morning Worship Service</h4>
+            <p>9:00 AM &amp; 11:00 AM &mdash; Main Sanctuary</p>
+          </div>
+        </div>
+        <div class="sched-row">
+          <div class="sched-day">Sunday</div>
+          <div class="sched-detail">
+            <h4>Evening Praise &amp; Prayer</h4>
+            <p>6:00 PM &mdash; Chapel Hall</p>
+          </div>
+        </div>
+        <div class="sched-row">
+          <div class="sched-day">Wednesday</div>
+          <div class="sched-detail">
+            <h4>Midweek Bible Study</h4>
+            <p>7:00 PM &mdash; Fellowship Room</p>
+          </div>
+        </div>
+        <div class="sched-row">
+          <div class="sched-day">Friday</div>
+          <div class="sched-detail">
+            <h4>Youth Night</h4>
+            <p>7:30 PM &mdash; Youth Center</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider"/>
+
+    <section class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Grow With Us</span>
+        <h2>Everything You Need for Your Faith Journey</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card" data-route="sermons">
+          <div class="card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round">
+              <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+            </svg>
+          </div>
+          <h3>Audio Sermons</h3>
+          <p>Powerful messages from our pastors — audio only, anytime, anywhere. No distractions.</p>
+        </div>
+        <div class="card" data-route="live">
+          <div class="card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.5" stroke-linecap="round">
+              <circle cx="12" cy="12" r="2"/>
+              <path d="M16.24 7.76a6 6 0 0 1 0 8.49M7.76 7.76a6 6 0 0 0 0 8.49"/>
+              <path d="M20.49 3.51a14 14 0 0 1 0 19.8M3.51 3.51a14 14 0 0 0 0 19.8"/>
+            </svg>
+          </div>
+          <h3>Live Worship</h3>
+          <p>Stream our Sunday services live in audio. Worship with our congregation in real time.</p>
+        </div>
+        <div class="card" data-route="prayer">
+          <div class="card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold-2)" stroke-width="1.5" stroke-linecap="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <h3>Prayer Wall</h3>
+          <p>Share your prayer requests. Our team reads and prays over every submission, every week.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="fb">Grace Community Church</div>
+      <p>123 Faith Avenue, Hope City &nbsp;&middot;&nbsp; hello@gracecommunity.church</p>
+    </footer>
+  </div>
+
+
+  <!-- ───────────── SERMONS ───────────── -->
+  <div id="pg-sermons" class="page">
+    <section class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">The Word</span>
+        <h2>Audio Sermons</h2>
+        <p>Transformative messages from our pastoral team. Select any card to listen.</p>
+      </div>
+      <div class="sermons-list" id="sermon-list">
+        <!-- rendered by app.js -->
+      </div>
+    </section>
+    <footer>
+      <div class="fb">Grace Community Church</div>
+      <p>All sermons are for personal, non-commercial use only.</p>
+    </footer>
+  </div>
+
+
+  <!-- ───────────── LIVE ───────────── -->
+  <div id="pg-live" class="page">
+    <div class="live-wrap">
+      <div class="live-glow"></div>
+      <div style="position:relative;z-index:1;max-width:540px;margin:0 auto;text-align:center">
+        <div class="live-pill"><span class="dot"></span>Sunday Service</div>
+        <h1 style="font-size:clamp(34px,6vw,60px);font-weight:400;line-height:1.1;margin-bottom:20px">
+          Live Worship Service
+        </h1>
+        <p style="color:var(--text-2);font-size:16px;line-height:1.75;margin-bottom:6px">
+          Join our congregation in worship — audio only, distraction free.
+          Press the button below to start listening.
+        </p>
+        <p style="color:var(--text-3);font-size:13px">
+          Sun 9 AM &middot; 11 AM &middot; 6 PM &nbsp;&middot;&nbsp; Wed 7 PM
+        </p>
+
+        <button class="listen-btn" id="listen-btn" aria-label="Listen Live">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="5,3 19,12 5,21"/>
+          </svg>
+          <span>Listen</span>
+        </button>
+      </div>
+    </div>
+    <footer>
+      <div class="fb">Grace Community Church</div>
+      <p>Live audio stream — no video, no distractions.</p>
+    </footer>
+  </div>
+
+
+  <!-- ───────────── PRAYER ───────────── -->
+  <div id="pg-prayer" class="page">
+    <section class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Come Before Him</span>
+        <h2>Prayer Wall</h2>
+        <p>Share what's on your heart. Our prayer team prays over every request, every week.</p>
+      </div>
+
+      <div class="prayer-form">
+        <h3 class="serif">Submit a Prayer Request</h3>
+        <form id="prayer-form" novalidate>
+          <div class="fg">
+            <label for="p-name">Your Name</label>
+            <input type="text" id="p-name" placeholder="e.g. Sarah M." maxlength="80" required autocomplete="off"/>
+          </div>
+          <div class="fg">
+            <label for="p-text">Your Prayer Request</label>
+            <textarea id="p-text" placeholder="Share what's on your heart..." maxlength="600" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+            Submit Prayer Request
+          </button>
+        </form>
+      </div>
+
+      <div class="section-head" style="margin-bottom:24px">
+        <span class="eyebrow">Community Prayers</span>
+        <h2>The Prayer Wall</h2>
+      </div>
+      <div class="prayer-wall" id="prayer-wall">
+        <!-- rendered by app.js -->
+      </div>
+    </section>
+    <footer>
+      <div class="fb">Grace Community Church</div>
+      <p>Your requests are read with care and kept with respect.</p>
+    </footer>
+  </div>
+
+
+  <!-- ───────────── ADMIN ───────────── -->
+  <div id="pg-admin" class="page">
+    <div class="admin-shell">
+
+      <aside class="admin-side">
+        <div class="admin-side-label">Dashboard</div>
+        <div class="asi active" data-panel="adm-overview">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          Overview
+        </div>
+        <div class="asi" data-panel="adm-prayers">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          Prayer Requests
+        </div>
+        <div class="asi" data-panel="adm-sermons">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          Sermons
+        </div>
+      </aside>
+
+      <div class="admin-body">
+
+        <!-- Overview -->
+        <div class="admin-panel active" id="adm-overview">
+          <h2>Dashboard</h2>
+          <p class="sub">Ministry platform at a glance.</p>
+          <div class="stats">
+            <div class="stat"><div class="n" id="stat-total">0</div><div class="l">Prayer Requests</div></div>
+            <div class="stat"><div class="n" id="stat-prayed">0</div><div class="l">Prayers Prayed</div></div>
+            <div class="stat"><div class="n">7</div><div class="l">Sermons Available</div></div>
+          </div>
+          <div class="card" style="max-width:420px">
+            <h3 style="font-size:16px;font-weight:600;margin-bottom:14px">Quick Navigation</h3>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <a href="#" class="btn btn-ghost" data-route="sermons" style="justify-content:flex-start">Sermon Library</a>
+              <a href="#" class="btn btn-ghost" data-route="prayer" style="justify-content:flex-start">Prayer Wall</a>
+              <a href="#" class="btn btn-ghost" data-route="live" style="justify-content:flex-start">Live Service</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prayers -->
+        <div class="admin-panel" id="adm-prayers">
+          <h2>Prayer Requests</h2>
+          <p class="sub">Review, pray over, and manage submitted prayer requests.</p>
+          <div id="admin-prayers-list"><!-- rendered by app.js --></div>
+        </div>
+
+        <!-- Sermons -->
+        <div class="admin-panel" id="adm-sermons">
+          <h2>Sermon Library</h2>
+          <p class="sub">Currently loaded sermons. Edit the <code style="color:var(--gold);font-size:12px">SERMONS</code> array in <code style="color:var(--gold);font-size:12px">app.js</code> to update.</p>
+          <div class="card">
+            <h3 style="font-size:15px;font-weight:600;margin-bottom:16px">Active Sermons</h3>
+            <div id="admin-sermon-list"><!-- rendered by app.js --></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ═══════════════ NOW PLAYING BAR ═══════════════ -->
+<div id="npbar" role="region" aria-label="Now playing">
+  <div class="np-art">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round">
+      <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+    </svg>
+  </div>
+  <div class="np-info">
+    <div class="np-title" id="np-title">—</div>
+    <div class="np-sub" id="np-sub">Audio Sermon</div>
+  </div>
+  <div class="np-ctrls">
+    <button class="np-play" id="np-play" aria-label="Play / Pause">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+    </button>
+    <button class="np-stop" id="np-stop" aria-label="Stop">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><rect x="4" y="4" width="16" height="16"/></svg>
+    </button>
+  </div>
+</div>
+
+<!-- ═══════════════ TOAST ═══════════════ -->
+<div id="toast" role="status" aria-live="polite"></div>
+
+<!-- ═══════════════ SCRIPTS ═══════════════ -->
+<script src="router.js"></script>
+<script src="youtube.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
